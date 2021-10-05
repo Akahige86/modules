@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - shell: /tmp/foo
+      register: foo_result
+      ignore_errors: True
+    - local_action: copy content= dest=file
