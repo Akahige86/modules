@@ -1,6 +1,11 @@
 ---
-- hosts: localhost
- become: True
- tasks:
- - name: Instalacja Zabbix Agent
- yum: name="http://repo.zabbix.com/zabbix/5.0/rhel/8/x86_64/zabbixagent-5.0.0-1.el8.x86_64.rpm"
+  - name: "Playing with Ansible and Git"
+    hosts: localhost
+    connection: local 
+    tasks:
+
+    - name: "just execute a ls -lrt command"
+      shell: "ls -lrt"
+      register: "output"
+
+    - debug: var=output.stdout_lines
