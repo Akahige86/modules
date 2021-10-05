@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+ become: True
+ tasks:
+ - name: Instalacja Zabbix Agent
+ yum: name="http://repo.zabbix.com/zabbix/5.0/rhel/8/x86_64/zabbixagent-5.0.0-1.el8.x86_64.rpm"
